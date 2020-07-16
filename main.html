@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="./js/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+	<title>예방가능한 감염병</title>
+	<style>
+	.ui-page{background:url('./images/background_main.jpg');background-size:100%;}
+	</style>
+</head>
+<body>
+<div data-role="page" id="startpage" data-theme="b">
+	<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<h1>예감: 예방 가능한 감염병</h1>
+	</div>
+	<div role="main" class="ui-content" style="padding:0px;">
+		<ul data-role="listview" data-inset="true">
+		    <li><a href="#" onclick="return moveToStatistics();">
+		        <img src="./images/icon_statistics_512.png">
+		    <h2>군내 감염병 통계</h2>
+		    <p>연도별/분기별 감염병 통계를 확인하실 수 있습니다.</p></a>
+		    </li>
+		    <li><a href="prevention.html">
+		        <img src="./images/icon_prevention_512.png">
+		    <h2>군내 감염병 예방 방법 안내</h2>
+		    <p>군내 감염병을 예방할 수 있는 방법을 소개합니다.</p></a>
+		    </li>
+		    <li><a href="http://ncov.mohw.go.kr/" target="_blank">
+		        <img src="./images/icon_covid.png">
+		    <h2>코로나바이러스감염증-19(COVID-19)</h2>
+		    <p>질병관리본부 운영. #지금우리는 #힘내라 대한민국 #우리는 할 수 있습니다 #코로나19 물럿거라!</p></a>
+		    </li>
+		    <li><a href="https://www.youtube.com/watch?v=peD2ex-KZzQ" target="_blank">
+		        <img src="./images/icon_news_512.png">
+		    <h2>코로나19 군 예방적 격리지침</h2>
+		    <p>국방홍보원 국방TV 오상현기자와 국방부 보건정책과 예방의학담당 김민관 해군 소령님께서 코로나19 대응 군 예방적 격리지침 바로알기!</p></a>
+		    </li>
+		    <li><a href="http://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000066953" target="_blank">
+		        <img src="./images/icon_law_512.png">
+		    <h2>군 감염병 예방업무 훈령</h2>
+		    <p>군에서 발생하는 감염병 예방업무에 필요한 사항을 규정함으로써 장병 건강을 향상·증진시키는데 기여함을 목적으로 하는 훈령 안내</p></a>
+		    </li>
+		</ul>
+	</div>
+	<div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<h6>감염병 관련 지침 준수 강조!! 2020. 7. 17.(금)</h6>
+	</div>
+<script type="text/javascript">
+function moveToStatistics(){
+	window.location.href = 'statistics.html';
+	return;
+}
+</script>
+
+</div>
+</body>
+</html>

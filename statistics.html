@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="./js/jquery.mobile-1.4.5.min.css" />
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="./js/loader.js"></script>
+	<title>예방가능한 감염병</title>
+	<style>
+	.ui-page{background:url('./images/background_main.jpg');background-size:100%;}
+	</style>
+</head>
+<body>
+<div data-role="page" id="startpage" data-theme="b">
+	<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<a href="#" class="ui-btn" data-rel="back">뒤로 가기</a><h1>군내 감염병 통계 자료</h1>
+	</div>
+	<div role="main" class="ui-content" style="padding:0px;">
+		<div id="columnchart_material_2015" class="statistics_chart">
+			<script type="text/javascript">
+			
+				var data_chart_2015 = new Array();
+				$.get("./data/disease_2015.csv", function(data) {
+					var lines = data.split("\n");
+					//console.log(lines);
+					for(var i=0; i<data.length; i++){
+						line = lines[i].split(",");
+						var row = new Array();
+						for(var j=0; j<line.length; j++){
+							if(j==0 || i==0){
+								row[j] = line[j];
+							}else{
+								row[j] = parseInt(line[j], 10);
+							}
+						}
+						data_chart_2015[i] = row;
+					}
+				})
+				console.log(data_chart_2015);
+			
+			  google.charts.load('current', {'packages':['bar']});
+			  google.charts.setOnLoadCallback(drawChart_2015);
+
+
+			  function drawChart_2015() {
+				var view = google.visualization.arrayToDataTable(data_chart_2015);
+
+				var options = {
+					height: 720,
+				  chart: {
+					title: '군내 질병 발생 통계',
+					subtitle: '2015년 2~4분기',
+				  }
+				};
+
+				var chart = new google.charts.Bar(document.getElementById('columnchart_material_2015'));
+				chart.draw(view, google.charts.Bar.convertOptions(options));
+			  }
+			  
+				var data_chart_2016 = new Array();
+				$.get("./data/disease_2016.csv", function(data) {
+					var lines = data.split("\n");
+					//console.log(lines);
+					for(var i=0; i<data.length; i++){
+						line = lines[i].split(",");
+						var row = new Array();
+						for(var j=0; j<line.length; j++){
+							if(j==0 || i==0){
+								row[j] = line[j];
+							}else{
+								row[j] = parseInt(line[j], 10);
+							}
+						}
+						data_chart_2016[i] = row;
+					}
+				})
+				console.log(data_chart_2016);
+			
+			  google.charts.load('current', {'packages':['bar']});
+			  google.charts.setOnLoadCallback(drawChart_2016);
+
+			  function drawChart_2016() {
+				var view = google.visualization.arrayToDataTable(data_chart_2016);
+
+				var options = {
+					height: 720,
+				  chart: {
+					title: '군내 질병 발생 통계',
+					subtitle: '2016년 1~4분기',
+				  }
+				};
+
+				var chart = new google.charts.Bar(document.getElementById('columnchart_material_2016'));
+				chart.draw(view, google.charts.Bar.convertOptions(options));
+			  }
+			  
+				var data_chart_2017 = new Array();
+				$.get("./data/disease_2017.csv", function(data) {
+					var lines = data.split("\n");
+					//console.log(lines);
+					for(var i=0; i<data.length; i++){
+						line = lines[i].split(",");
+						var row = new Array();
+						for(var j=0; j<line.length; j++){
+							if(j==0 || i==0){
+								row[j] = line[j];
+							}else{
+								row[j] = parseInt(line[j], 10);
+							}
+						}
+						data_chart_2017[i] = row;
+					}
+				})
+				console.log(data_chart_2017);
+			
+			  google.charts.load('current', {'packages':['bar']});
+			  google.charts.setOnLoadCallback(drawChart_2017);
+
+			  function drawChart_2017() {
+				var view = google.visualization.arrayToDataTable(data_chart_2017);
+
+				var options = {
+					height: 720,
+				  chart: {
+					title: '군내 질병 발생 통계',
+					subtitle: '2017년 1~4분기',
+				  }
+				};
+
+				var chart = new google.charts.Bar(document.getElementById('columnchart_material_2017'));
+				chart.draw(view, google.charts.Bar.convertOptions(options));
+			  }
+				var data_chart_2018 = new Array();
+				$.get("./data/disease_2018.csv", function(data) {
+					var lines = data.split("\n");
+					//console.log(lines);
+					for(var i=0; i<data.length; i++){
+						line = lines[i].split(",");
+						var row = new Array();
+						for(var j=0; j<line.length; j++){
+							if(j==0 || i==0){
+								row[j] = line[j];
+							}else{
+								row[j] = parseInt(line[j], 10);
+							}
+						}
+						data_chart_2018[i] = row;
+					}
+				})
+				console.log(data_chart_2018);
+			
+			  google.charts.load('current', {'packages':['bar']});
+			  google.charts.setOnLoadCallback(drawChart_2018);
+
+			  function drawChart_2018() {
+				var view = google.visualization.arrayToDataTable(data_chart_2018);
+
+				var options = {
+					height: 720,
+				  chart: {
+					title: '군내 질병 발생 통계',
+					subtitle: '2018년 1~4분기',
+				  }
+				};
+
+				var chart = new google.charts.Bar(document.getElementById('columnchart_material_2018'));
+				chart.draw(view, google.charts.Bar.convertOptions(options));
+			  }
+				var data_chart_2019 = new Array();
+				$.get("./data/disease_2019.csv", function(data) {
+					var lines = data.split("\n");
+					//console.log(lines);
+					for(var i=0; i<data.length; i++){
+						line = lines[i].split(",");
+						var row = new Array();
+						for(var j=0; j<line.length; j++){
+							if(j==0 || i==0){
+								row[j] = line[j];
+							}else{
+								row[j] = parseInt(line[j], 10);
+							}
+						}
+						data_chart_2019[i] = row;
+					}
+					/*
+					for(var i=0; i<data.length; i++){
+						line = lines[i].split(",");
+						var row = new Array();
+						for(var j=0; j<line.length; j++){
+							row[j] = line[j];
+						}
+						data_chart_2019[i] = row;
+					}
+					*/
+					/*
+					$.each(lines, function(n, element) {
+						//console.log(element);
+						data_chart_2019[n] = element.split(",");
+					})
+					*/
+				})
+				console.log(data_chart_2019);
+			
+			  google.charts.load('current', {'packages':['bar']});
+			  google.charts.setOnLoadCallback(drawChart_2019);
+
+			  function drawChart_2019() {
+				var view = google.visualization.arrayToDataTable(data_chart_2019);
+
+				var options = {
+					height: 720,
+				  chart: {
+					title: '군내 질병 발생 통계',
+					subtitle: '2019년 1~2분기',
+				  }
+				};
+
+				var chart = new google.charts.Bar(document.getElementById('columnchart_material_2019'));
+				chart.draw(view, google.charts.Bar.convertOptions(options));
+			  }
+			</script>
+		</div>
+		<div id="columnchart_material_2016" class="statistics_chart">
+		</div>
+		<div id="columnchart_material_2017" class="statistics_chart">
+		</div>
+		<div id="columnchart_material_2018" class="statistics_chart">
+		</div>
+		<div id="columnchart_material_2019" class="statistics_chart">
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<h6>Icons are provided from Flat Icons from <a href="https://flat-icons.com/">www.flaticon.com</a></h6>
+	</div>
+</div>
+</body>
+</html>
